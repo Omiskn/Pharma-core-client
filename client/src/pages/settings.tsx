@@ -8,67 +8,69 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Settings() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" dir="rtl">
       <div>
-        <h2 className="text-3xl font-heading font-bold text-gray-900">Settings</h2>
-        <p className="text-gray-500">Manage pharmacy configuration and preferences.</p>
+        <h2 className="text-3xl font-heading font-bold text-foreground">الإعدادات</h2>
+        <p className="text-muted-foreground">إدارة تكوين الصيدلية والتفضيلات.</p>
       </div>
 
       <Tabs defaultValue="general" className="w-full">
         <TabsList className="grid w-full grid-cols-4 lg:w-[400px]">
-          <TabsTrigger value="general">General</TabsTrigger>
-          <TabsTrigger value="users">Users</TabsTrigger>
-          <TabsTrigger value="notifications">Alerts</TabsTrigger>
-          <TabsTrigger value="billing">Billing</TabsTrigger>
+          <TabsTrigger value="general">عام</TabsTrigger>
+          <TabsTrigger value="users">المستخدمين</TabsTrigger>
+          <TabsTrigger value="notifications">التنبيهات</TabsTrigger>
+          <TabsTrigger value="billing">الفواتير</TabsTrigger>
         </TabsList>
         
         <TabsContent value="general" className="space-y-6 mt-6">
           <Card>
-            <CardHeader>
-              <CardTitle>Pharmacy Information</CardTitle>
+            <CardHeader className="text-right">
+              <CardTitle>معلومات الصيدلية</CardTitle>
               <CardDescription>
-                Public information about your pharmacy branch.
+                المعلومات العامة لفرع الصيدلية الخاص بك.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-right">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Pharmacy Name</Label>
-                  <Input id="name" defaultValue="PharmaCore Central" />
+                  <Label htmlFor="name">اسم الصيدلية</Label>
+                  <Input id="name" defaultValue="فارماكور المركزية" className="text-right" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="license">License Number</Label>
-                  <Input id="license" defaultValue="PH-8829-NYC" disabled />
+                  <Label htmlFor="license">رقم الترخيص</Label>
+                  <Input id="license" defaultValue="PH-8829-NYC" disabled className="text-right" />
                 </div>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="address">Address</Label>
-                <Input id="address" defaultValue="123 Medical Plaza, Downtown" />
+              <div className="space-y-2 text-right">
+                <Label htmlFor="address">العنوان</Label>
+                <Input id="address" defaultValue="123 مجمع المدينة الطبي" className="text-right" />
               </div>
-              <Button>Save Changes</Button>
+              <div className="flex justify-start">
+                <Button>حفظ التغييرات</Button>
+              </div>
             </CardContent>
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle>System Preferences</CardTitle>
+            <CardHeader className="text-right">
+              <CardTitle>تفضيلات النظام</CardTitle>
               <CardDescription>
-                Configure how the ERP behaves.
+                تكوين سلوك نظام ERP.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label>Dark Mode</Label>
-                  <p className="text-sm text-muted-foreground">Enable dark theme for the interface.</p>
+                <div className="space-y-0.5 text-right">
+                  <Label>الوضع الداكن</Label>
+                  <p className="text-sm text-muted-foreground">تفعيل السمة الداكنة للواجهة.</p>
                 </div>
                 <Switch />
               </div>
               <Separator />
               <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label>Auto-Logout</Label>
-                  <p className="text-sm text-muted-foreground">Log out after 15 minutes of inactivity.</p>
+                <div className="space-y-0.5 text-right">
+                  <Label>تسجيل الخروج التلقائي</Label>
+                  <p className="text-sm text-muted-foreground">تسجيل الخروج بعد 15 دقيقة من عدم النشاط.</p>
                 </div>
                 <Switch defaultChecked />
               </div>
@@ -76,21 +78,19 @@ export default function Settings() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="users" className="mt-6">
+        <TabsContent value="users" className="mt-6 text-right">
           <Card>
             <CardHeader>
-              <CardTitle>User Management</CardTitle>
-              <CardDescription>Manage access for pharmacists and staff.</CardDescription>
+              <CardTitle>إدارة المستخدمين</CardTitle>
+              <CardDescription>إدارة وصول الصيادلة والموظفين.</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="text-sm text-muted-foreground">
-                User management features would go here (Add/Remove Staff, Roles, Permissions).
+                ميزات إدارة المستخدمين ستكون متاحة هنا (إضافة/حذف موظفين، أدوار، أذونات).
               </div>
             </CardContent>
           </Card>
         </TabsContent>
-        
-        {/* Other tabs can be empty placeholders for now */}
       </Tabs>
     </div>
   );
