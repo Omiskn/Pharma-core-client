@@ -1,7 +1,7 @@
 import { Switch, Route } from "wouter";
 // import { Toaster } from "@/core/components/ui/toaster";
 import { TooltipProvider } from "@/ui/tooltip";
-import { Layout } from "@/layout/layout";
+import { Layout } from "@/layout/Layout";
 import POS from "@/features/pos/Pos";
 import Patients from "@/features/patients/Patients";
 import Settings from "@/features/settings/Settings";
