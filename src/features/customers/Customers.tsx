@@ -1,8 +1,8 @@
-import PatientsHeader from "./components/PatientsHeader";
-import PatientsFilters from "./components/PatientsFilters";
-import PatientsTable from "./components/PatientsTable";
+import CustomersHeader from "./components/CustomersHeader";
+import CustomersFilters from "./components/CustomersFilters";
+import CustomersTable from "./components/CustomersTable";
 
-const patients = [
+const customers = [
   {
     id: 1,
     name: "علي محمد",
@@ -65,14 +65,14 @@ const patients = [
   },
 ];
 
-export default function Patients() {
+export default function Customers() {
   return (
     <div className="space-y-6" dir="rtl">
-      <PatientsHeader />
+      <CustomersHeader />
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        <PatientsFilters />
-        <PatientsTable data={patients} />
+        <CustomersFilters />
+        <CustomersTable data={customers} />
       </div>
     </div>
   );

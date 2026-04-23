@@ -1,13 +1,13 @@
 import { Table, TableBody, TableHead, TableHeader, TableRow } from "@/ui/table";
-import PatientRow from "./PatientRow";
+import CustomerRow from "./CustomerRow";
 
-export default function PatientsTable({ data }: any) {
+export default function CustomersTable({ data }: any) {
   return (
     <div className="lg:col-span-3 bg-card rounded-xl shadow-sm border border-border overflow-hidden">
       <Table>
         <TableHeader>
           <TableRow className="bg-muted/50 text-right">
-            <TableHead className="text-right">المريض</TableHead>
+            <TableHead className="text-right">العميل</TableHead>
             <TableHead className="text-right">معلومات الاتصال</TableHead>
             <TableHead className="text-right">الحالة الصحية</TableHead>
             <TableHead className="text-right">آخر زيارة</TableHead>
@@ -17,8 +17,8 @@ export default function PatientsTable({ data }: any) {
         </TableHeader>
 
         <TableBody>
-          {data.map((p: any) => (
-            <PatientRow key={p.id} patient={p} />
+          {data.map((c: any) => (
+            <CustomerRow key={c.id} customer={c} />
           ))}
         </TableBody>
       </Table>

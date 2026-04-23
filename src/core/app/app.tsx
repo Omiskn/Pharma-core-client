@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import Patients from "@features/patients/Patients";
+import CustomersPage from "@/pages/CustomersPage";
 import Settings from "@features/settings/Settings";
 import Invoices from "@features/invoices/Invoices";
 import DashboardPage from "@/pages/DashboardPage";
@@ -44,7 +44,7 @@ function App() {
             <Route index element={<DashboardPage />} />
             <Route path="inventory" element={<InventoryPage />} />
             <Route path="pos" element={<POS />} />
-            <Route path="patients" element={<Patients />} />
+            <Route path="customers" element={<CustomersPage />} />
             <Route path="reports" element={<Reports />} />
             <Route path="invoices" element={<Invoices />} />
             <Route path="settings" element={<Settings />} />
