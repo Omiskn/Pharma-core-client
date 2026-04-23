@@ -1,5 +1,4 @@
 export { api } from "./client";
-export * from "./auth";
 export * from "./medicines";
 export * from "./inventory";
 export * from "./categories";

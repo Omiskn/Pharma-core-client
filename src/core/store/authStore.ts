@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { UserRole, type AuthenticatedUser, type LoginResponse } from "@/types";
+import { UserRole, type AuthenticatedUser, type LoginResponse } from "@features/auth/types";
 
 interface AuthState {
   token: string | null;

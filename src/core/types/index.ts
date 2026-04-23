@@ -1,5 +1,4 @@
 export * from "./api";
-export * from "./auth";
 export * from "./medicine";
 export * from "./category";
 export * from "./customer";

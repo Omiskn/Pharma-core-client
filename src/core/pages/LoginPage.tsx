@@ -1,7 +1,7 @@
-import Login from "@features/authentication/Login";
+import LoginPage from "@features/auth/pages/LoginPage";
 
-function LoginPage() {
-  return <Login />;
+function LoginPageWrapper() {
+  return <LoginPage />;
 }
 
-export default LoginPage;
+export default LoginPageWrapper;

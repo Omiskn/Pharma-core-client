@@ -10,6 +10,7 @@
     "check": "tsc"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-label": "^2.1.8",
@@ -27,8 +28,10 @@
     "lucide-react": "^0.545.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-hook-form": "^7.73.1",
     "react-router-dom": "^7.14.2",
     "recharts": "^2.15.4",
+    "zod": "^4.3.6",
     "zustand": "^5.0.12"
   },
   "devDependencies": {
@@ -40,6 +43,7 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
+    "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.1.14",
     "typescript": "5.6.3",
     "vite": "^7.1.9"

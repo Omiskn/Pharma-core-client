@@ -2,12 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import CustomersPage from "@/pages/CustomersPage";
+import ProfilePage from "@/pages/ProfilePage";
 import Settings from "@features/settings/Settings";
 import Invoices from "@features/invoices/Invoices";
 import DashboardPage from "@/pages/DashboardPage";
 import InventoryPage from "@/pages/InventoryPage";
 import Reports from "@features/reports/Reports";
-import RegisterPage from "@/pages/RegisterPage";
 import NotFound from "@/pages/NotFoundPage";
 import LoginPage from "@/pages/LoginPage";
 import { Layout } from "@/layout/layout";
@@ -30,7 +30,6 @@ function App() {
         <Routes>
           {/* 🔹 خارج Layout */}
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
 
           {/* 🔹 داخل Layout */}
           <Route
@@ -47,6 +46,7 @@ function App() {
             <Route path="customers" element={<CustomersPage />} />
             <Route path="reports" element={<Reports />} />
             <Route path="invoices" element={<Invoices />} />
+            <Route path="profile" element={<ProfilePage />} />
             <Route path="settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
           </Route>

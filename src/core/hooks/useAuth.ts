@@ -1,5 +1,5 @@
 import { useAuthStore } from "@/store/authStore";
-import { UserRole } from "@/types";
+import { UserRole } from "@features/auth/types";
 
 export function useAuth() {
   const { user, token, isAuthenticated, setAuth, logout, hasRole } =
