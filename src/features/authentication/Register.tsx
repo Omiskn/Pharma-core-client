@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/ui/button";
 import { Mail, Lock, UserPlus, User } from "lucide-react";
-import AuthLayout from "./AuthLayout";
-import AuthInput from "./AuthInput";
+import AuthLayout from "./components/AuthLayout";
+import AuthInput from "./components/AuthInput";
 import { NavLink } from "react-router-dom";
 
 export default function Register() {
